@@ -1,0 +1,24 @@
+# Task 1
+name = "Luna"
+age = 21
+height = 5.5
+print(f"Hey there, my name is {name}! I’m {age} years old and {height} feet tall. ")
+
+# Task 2
+num1 = 12
+num2 = 5
+print("Let's do some math magic! 🧙‍♂️")
+print(f"The sum of {num1} and {num2} is {num1 + num2}.")
+print(f"When you subtract {num2} from {num1}, you get {num1 - num2}.")
+print(f"Multiplying {num1} by {num2} gives us {num1 * num2}.")
+print(f"And if we divide {num1} by {num2}, we get {num1 / num2:.2f}.")
+
+# Task 3
+user = input("Enter any number and I'll tell you a secret about it: ")
+number = float(user_input)
+if number > 0:
+    print("This number is positive. Awesome! ")
+elif number < 0:
+    print("This number is negative. Better luck next time!")
+else:
+    print("Zero it is. A perfect balance! ")
