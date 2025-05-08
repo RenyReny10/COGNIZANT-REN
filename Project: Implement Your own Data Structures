@@ -1,0 +1,60 @@
+# Step 1: Create the Inventory
+inventory = {
+    "apple": (10, 2.5),
+    "banana": (20, 1.2)
+}
+
+# Step 2: Add, Remove, and Update Items
+def add_item():
+    item = input("Enter the name of the item to add: ")
+    quantity = int(input(f"Enter the quantity of {item}: "))
+    price = float(input(f"Enter the price of {item}: "))
+    inventory[item] = (quantity, price)
+    print(f"{item} has been added to the inventory.")
+
+def remove_item():
+    item = input("Enter the name of the item to remove: ")
+    if item in inventory:
+        del inventory[item]
+        print(f"{item} has been removed from the inventory.")
+    else:
+        print(f"{item} not found in inventory!")
+
+# Step 3: Display the Inventory
+def display_inventory():
+    print("\nCurrent inventory:")
+    for item, (quantity, price) in inventory.items():
+        print(f"Item: {item}, Quantity: {quantity}, Price: ${price}")
+
+# Step 4: Bonus - Calculate Total Value
+def calculate_total_value():
+    total_value = sum(quantity * price for quantity, price in inventory.values())
+    print(f"Total value of inventory: ${total_value:.2f}")
+
+# Main Program (Interactive)
+print("Welcome to the Inventory Manager!")
+display_inventory()
+
+while True:
+    print("\nChoose an action:")
+    print("1. Add an item")
+    print("2. Remove an item")
+    print("3. Display inventory")
+    print("4. Calculate total value")
+    print("5. Exit")
+    
+    choice = input("Enter your choice (1/2/3/4/5): \n")
+    
+    if choice == '1':
+        add_item()
+    elif choice == '2':
+        remove_item()
+    elif choice == '3':
+        display_inventory()
+    elif choice == '4':
+        calculate_total_value()
+    elif choice == '5':
+        print("Goodbye!")
+        break
+    else:
+        print("Invalid choice! Please choose a valid option.")
