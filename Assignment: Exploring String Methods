@@ -1,0 +1,33 @@
+# Task 1 - String Slicing and Indexing
+print("🔹 Task 1 - String Slicing and Indexing")
+text = "Python is amazing!"
+first_word = text[0:6]
+amazing_word = text[10:17]
+reversed_text = text[::-1]
+
+print("First word:", first_word)
+print("Amazing part:", amazing_word)
+print("Reversed string:", reversed_text)
+print("\n")
+
+# Task 2 - String Methods
+print("🔹 Task 2 - String Methods")
+message = " hello, python world! "
+stripped = message.strip()
+capitalized = stripped.capitalize()
+replaced = stripped.replace("world", "universe")
+uppercased = stripped.upper()
+
+print("Stripped:", stripped)
+print("Capitalized:", capitalized)
+print("Replaced:", replaced)
+print("Uppercase:", uppercased)
+print("\n")
+
+# Task 3 - Check for Palindromes
+print("🔹 Task 3 - Check for Palindromes")
+user_word = input("Enter a word: ").lower()
+if user_word == user_word[::-1]:
+    print(f"Yes, '{user_word}' is a palindrome! 🎉")
+else:
+    print(f"Nope, '{user_word}' is not a palindrome. Try another one! ")
