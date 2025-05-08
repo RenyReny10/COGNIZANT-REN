@@ -1,0 +1,23 @@
+# Task 1 - Countdown Timer
+print("=== Task 1: Countdown Timer ===")
+print("Initiating self-destruct sequence... just for fun!")
+start = int(input("Enter the timer number: "))
+while start >= 1:
+    print(start, end=" ")
+    start -= 1
+print("Booooom 💣\n")
+
+# Task 2 - Multiplication Table
+print("=== Task 2: Multiplication Table ===")
+num = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+print()
+
+# Task 3 - Factorial Finder
+print("=== Task 3: Factorial ===")
+number = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, number + 1):
+    factorial *= i
+print(f"The factorial of {number} is {factorial}.")
