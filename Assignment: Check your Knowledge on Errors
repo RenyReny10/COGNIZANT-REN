@@ -1,0 +1,48 @@
+# Task 1 - Understanding Python Exceptions
+while True:
+    try:
+        number = int(input("Enter a number: "))
+        result = 100 / number
+    except ZeroDivisionError:
+        print("Oops! You cannot divide by zero.")
+    except ValueError:
+        print("Invalid input! Please enter a valid number.")
+    else:
+        print(f"100 divided by {number} is {result}.")
+        break
+
+# Task 2 - Types of Exceptions
+
+# IndexError example:
+try:
+    sample_list = [1, 2, 3]
+    print(sample_list[5])  # Trying to access index 5 which doesn't exist
+except IndexError:
+    print("IndexError occurred! List index out of range.")
+
+# KeyError example:
+try:
+    sample_dict = {"name": "Alice"}
+    print(sample_dict["age"])  # Key 'age' does not exist in the dictionary
+except KeyError:
+    print("KeyError occurred! Key not found in the dictionary.")
+
+# TypeError example:
+try:
+    result = "hello" + 5  # Trying to add string and integer
+except TypeError:
+    print("TypeError occurred! Unsupported operand types.")
+
+# Task 3 - Using try...except...else...finally
+try:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 / num2
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+except ValueError:
+    print("Error: Please enter valid numbers.")
+else:
+    print(f"The result of dividing {num1} by {num2} is {result}.")
+finally:
+    print("Thank you for using the division program!")
