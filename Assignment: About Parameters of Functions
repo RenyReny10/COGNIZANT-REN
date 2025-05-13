@@ -1,0 +1,72 @@
+# Task 1 - Writing Functions
+
+def greet_user(name):
+    print(f"\nHello, {name}! Welcome aboard.")
+
+def add_numbers(a, b):
+    return a + b
+
+# Solicita datos del usuario
+user_name = input("What's your name? ")
+greet_user(user_name)
+
+num1 = int(input("Enter the first number to add: "))
+num2 = int(input("Enter the second number to add: "))
+sum_result = add_numbers(num1, num2)
+print(f"The sum of {num1} and {num2} is {sum_result}.")
+
+print("\n" + "-"*40)
+
+# Task 2 - Using Default Parameters
+
+def describe_pet(pet_name, animal_type="dog"):
+    print(f"I have a {animal_type} named {pet_name}.")
+
+# Solicita datos del usuario
+pet_name = input("Enter your pet's name: ")
+animal_type = input("Enter the type of animal (press Enter for 'dog'): ")
+if animal_type == "":
+    describe_pet(pet_name)
+else:
+    describe_pet(pet_name, animal_type)
+
+print("\n" + "-"*40)
+
+# Task 3 - Functions with Variable Arguments
+
+def make_sandwich(*ingredients):
+    print("Making a sandwich with the following ingredients:")
+    for ingredient in ingredients:
+        print(f"- {ingredient}")
+
+# Solicita ingredientes del usuario
+print("Let's make a sandwich!")
+ingredients_input = input("Enter ingredients separated by commas: ")
+ingredient_list = [i.strip() for i in ingredients_input.split(",")]
+make_sandwich(*ingredient_list)
+
+print("\n" + "-"*40)
+
+# Task 4 - Understanding Recursion
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Solicita número del usuario
+fact_num = int(input("Enter a number to calculate its factorial: "))
+fib_num = int(input("Enter a position to get the Fibonacci number: "))
+
+fact_result = factorial(fact_num)
+fib_result = fibonacci(fib_num)
+
+print(f"Factorial of {fact_num} is {fact_result}.")
+print(f"The {fib_num}th Fibonacci number is {fib_result}.")
