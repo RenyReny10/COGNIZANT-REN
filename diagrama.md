@@ -1,14 +1,10 @@
-# Diagrama de Proceso - Metodología OvoSight
-
-```mermaid
 graph TD
-    A[Inicio] --> B[Apertura automática de archivos OCT\nExtracción de datos e información estructural en XML]
-    B --> C[Procesamiento de datos de intensidad\nFiltrado y eliminación de ruido por decibeles]
-    C --> D[Identificación automatizada de óvulos\nRed neuronal entrenada]
-    D --> E[Exportación de cortes axiales\nDónde se muestren óvulos]
-    E --> F[Cálculo del tamaño del vóxel\nConservación de dimensiones físicas]
-    F --> G[Interfaz de protección\nSistema de autenticación]
-    G --> H[Cifrado de datos\nAdvanced Encryption Standard (AES)]
-    H --> I[Redacción automática del reporte\nÓvulos, coordenadas, fecha, hora, responsable]
+    A[Inicio] --> B[Apertura de archivos OCT\nExtracción de XML]
+    B --> C[Procesamiento de intensidad\nFiltrado en decibeles]
+    C --> D[Identificación de óvulos\nRed neuronal]
+    D --> E[Exportación de cortes axiales]
+    E --> F[Cálculo de vóxel\nEscala física]
+    F --> G[Autenticación\nInterfaz segura]
+    G --> H[Cifrado de datos\nAES]
+    H --> I[Reporte automático\nDatos y metadatos]
     I --> J[Fin]
-```
