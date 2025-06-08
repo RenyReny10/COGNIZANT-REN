@@ -1,3 +1,6 @@
+# Diagrama de Proceso - Metodología OvoSight
+
+```mermaid
 graph TD
     A[Inicio] --> B[Apertura automática de archivos OCT\nExtracción de datos e información estructural en XML]
     B --> C[Procesamiento de datos de intensidad\nFiltrado y eliminación de ruido por decibeles]
@@ -8,3 +11,4 @@ graph TD
     G --> H[Cifrado de datos\nAdvanced Encryption Standard (AES)]
     H --> I[Redacción automática del reporte\nÓvulos, coordenadas, fecha, hora, responsable]
     I --> J[Fin]
+```
