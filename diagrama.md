@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Inicio] --> B[Apertura de archivos OCT\nExtracción de XML]
     B --> C[Procesamiento de intensidad\nFiltrado en decibeles]
